@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>my practices</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--font-Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    .row > div:first-child{
+        background-color: #aaaaaa;
+    }
+    .row > div{
+        background-color: #bbbbbb;
+    }
+    .row > div:last-child{
+        background-color: #cccccc;
+    }
+    .header{
+        grid-area: header;
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+            'header header header header header header'
+            'left middle middle middle middle right'
+            'footer footer footer footer footer footer';
+    }
+    .left,.middle,.right{
+        padding: 10px;
+        height: 300px;
+    }
+    .left{
+        grid-area: left;
+    }
+    .middle{
+        grid-area: middle;
+    }
+    .right{
+        grid-area: right;
+    }
+    
+    .footer{
+        grid-area: footer;
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+    }
+    @media (max-width: 600px){
+        .grid-container {
+            grid-template-areas: 
+            'header header header header header header'
+            'left left left left left left'
+            'middle middle middle middle middle middle'
+            'right right right right right right'
+            'footer footer footer footer footer footer';
+        }
+    }
+  
+    
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <p>Header</p>
+        </div>
+            <div class="column left" style="background-color: #aaaaaa;">Column</div>
+            <div class="column middle" style="background-color: #bbbbbb;">Column</div>
+            <div class="column right" style="background-color: #cccccc;">Column</div>
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
